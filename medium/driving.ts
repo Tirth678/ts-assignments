@@ -12,6 +12,14 @@ interface User {
   age: number;
 }
 
-function isEligibleForDriving(users: User[]) {
-  return users.filter((x) => x.age >= 18);
+function isEligibleForDriving(users: User) {
+  return users.age >= 18;
 }
+
+console.log(
+  isEligibleForDriving({
+    firstName: "Idk",
+    lastName: "12",
+    age: 12,
+  }),
+);
